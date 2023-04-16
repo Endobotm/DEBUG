@@ -1,0 +1,51 @@
+/* ========================== Main Styles ========================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300&display=swap"); /* Font-link */
+* {
+  /* Universal Styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  color: var(--color-4);
+}
+:root{
+  --color-1: #645CBB;
+  --color-2: #A084DC;
+  --color-3: #BFACE2;
+  --color-4: #ffffff;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-1);
+}
+.box{
+  background-color: var(--color-2);
+  padding: 2rem 4rem;
+  border-radius: 4px;
+  text-align: center;
+}
+::placeholder{
+  color: var(--color-4);
+  opacity: 0.9;
+}
+input{
+  background-color: var(--color-3);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  outline: none;
+  margin: 4px;
+  color: var(--color-4);
+}
+input[type = submit]:hover{
+  border: 1px solid var(--color-4);
+  background: transparent;
+  cursor: pointer;
+}

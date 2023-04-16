@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tasker</title>
+    <script
+      src="https://kit.fontawesome.com/9114e2d385.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <form action="submit" method="post">
+        <input type="text" placeholder="Task Name" name="tasks" /><br />
+        <input type="submit" value="Add Task" />
+      </form>
+      <ul>
+        <% data.forEach(details=> { %>
+        <li>
+          <div>
+            <%= details.content %>
+            <a href="/edit/<%= details._id %>" class="edit"
+              ><i class="fa-solid fa-pencil" style="color: #ffffff"></i
+            ></a>
+            <a href="/remove/<%= details._id %>" class="remove"
+              ><i class="fa-regular fa-trash-can" style="color: #ffffff"></i
+            ></a>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tasker</title>
+    <script
+      src="https://kit.fontawesome.com/9114e2d385.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <% data.forEach(details=> { %> <% if(details._id == idupdate) { %>
+        <li>
+          <form action="/edit/<%= details._id %>" method="post">
+            <input type="text" placeholder="Task Name" name="tasks" /><br />
+            <input type="submit" value="Update" />
+          </form>
+        </li>
+        <% } %> <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
